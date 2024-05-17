@@ -13,7 +13,6 @@
 		CE9B3F702BF627980034E6E3 /* CatListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B3F6F2BF627980034E6E3 /* CatListViewModel.swift */; };
 		CEDA01F02BF4F16600E5AEB3 /* CatSearchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA01EF2BF4F16600E5AEB3 /* CatSearchApp.swift */; };
 		CEDA01F22BF4F16600E5AEB3 /* CatList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA01F12BF4F16600E5AEB3 /* CatList.swift */; };
-		CEDA01F42BF4F16600E5AEB3 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA01F32BF4F16600E5AEB3 /* Item.swift */; };
 		CEDA01F62BF4F17700E5AEB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEDA01F52BF4F17700E5AEB3 /* Assets.xcassets */; };
 		CEDA01FA2BF4F17700E5AEB3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEDA01F92BF4F17700E5AEB3 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -26,7 +25,6 @@
 		CEDA01EC2BF4F16600E5AEB3 /* CatSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEDA01EF2BF4F16600E5AEB3 /* CatSearchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatSearchApp.swift; sourceTree = "<group>"; };
 		CEDA01F12BF4F16600E5AEB3 /* CatList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatList.swift; sourceTree = "<group>"; };
-		CEDA01F32BF4F16600E5AEB3 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		CEDA01F52BF4F17700E5AEB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEDA01F72BF4F17700E5AEB3 /* CatSearch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CatSearch.entitlements; sourceTree = "<group>"; };
 		CEDA01F92BF4F17700E5AEB3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -72,7 +70,6 @@
 		CE9B3F6B2BF52DCC0034E6E3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				CEDA01F32BF4F16600E5AEB3 /* Item.swift */,
 				CE9B3F6C2BF52DD80034E6E3 /* Cat.swift */,
 			);
 			path = Model;
@@ -195,7 +192,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEDA01F22BF4F16600E5AEB3 /* CatList.swift in Sources */,
-				CEDA01F42BF4F16600E5AEB3 /* Item.swift in Sources */,
 				CE9B3F6D2BF52DD80034E6E3 /* Cat.swift in Sources */,
 				CE9B3F662BF514BE0034E6E3 /* APIManager.swift in Sources */,
 				CEDA01F02BF4F16600E5AEB3 /* CatSearchApp.swift in Sources */,
@@ -344,10 +340,10 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = naore.CatSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -382,10 +378,10 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = naore.CatSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -7,6 +7,7 @@
 
 import Foundation
 
+@MainActor
 final class CatListViewModel: ObservableObject {
     
     // MARK: - Properties
@@ -23,6 +24,8 @@ final class CatListViewModel: ObservableObject {
     
     func loadCats() async {
         guard let cats: Cats = await APIManager.shared.fetchCats(fromURL: Constants.APIConstants.breeds) else { return }
-        self.cats = cats
+        await MainActor.run {
+            self.cats = cats
+        }
     }
 }

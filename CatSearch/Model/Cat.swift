@@ -20,7 +20,6 @@ final class Cat: Codable {
   let catDescription: String?
   let altNames: String?
   let wikipediaURL: String?
-  let image: CatImage?
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -28,9 +27,8 @@ final class Cat: Codable {
         case temperament
         case origin
         case catDescription = "description"
-        case altNames
-        case wikipediaURL
-        case image
+        case altNames = "alt_names"
+        case wikipediaURL = "wikipedia_url"
     }
     
     init(id: String?,
@@ -39,8 +37,7 @@ final class Cat: Codable {
          origin: String?,
          catDescription: String?,
          altNames: String?,
-         wikipediaURL: String?,
-         image: CatImage?) {
+         wikipediaURL: String?) {
         self.id = id
         self.name = name
         self.temperament = temperament
@@ -48,19 +45,17 @@ final class Cat: Codable {
         self.catDescription = catDescription
         self.altNames = altNames
         self.wikipediaURL = wikipediaURL
-        self.image = image
     }
 
     required init(from decoder: Decoder) throws {
            let container = try decoder.container(keyedBy: CodingKeys.self)
-           id = try container.decode(String.self, forKey: .id)
-           name = try container.decode(String.self, forKey: .name)
-           temperament = try container.decode(String.self, forKey: .temperament)
-           origin = try container.decode(String.self, forKey: .origin)
-           catDescription = try container.decode(String.self, forKey: .catDescription)
-           altNames = try container.decode(String.self, forKey: .altNames)
-           wikipediaURL = try container.decode(String.self, forKey: .wikipediaURL)
-           image = try container.decode(CatImage.self, forKey: .image)
+           id = try container.decodeIfPresent(String.self, forKey: .id)
+           name = try container.decodeIfPresent(String.self, forKey: .name)
+           temperament = try container.decodeIfPresent(String.self, forKey: .temperament)
+           origin = try container.decodeIfPresent(String.self, forKey: .origin)
+           catDescription = try container.decodeIfPresent(String.self, forKey: .catDescription)
+           altNames = try container.decodeIfPresent(String.self, forKey: .altNames)
+           wikipediaURL = try container.decodeIfPresent(String.self, forKey: .wikipediaURL)
        }
        
        func encode(to encoder: Encoder) throws {
@@ -72,7 +67,6 @@ final class Cat: Codable {
            try container.encode(catDescription, forKey: .catDescription)
            try container.encode(altNames, forKey: .altNames)
            try container.encode(wikipediaURL, forKey: .wikipediaURL)
-           try container.encode(image, forKey: .image)
        }
 }
 
