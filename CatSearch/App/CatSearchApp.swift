@@ -25,7 +25,7 @@ struct CatSearchApp: App {
 
     var body: some Scene {
         WindowGroup {
-            CatListView(viewModel: CatListViewModel())
+            CatContentView()
         }
         .modelContainer(sharedModelContainer)
     }

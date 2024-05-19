@@ -9,7 +9,14 @@ import SwiftUI
 
 struct CatDetailsView: View {
     let cat: Cat
-
+    var columns: [GridItem] = [
+        GridItem(.fixed(120)),
+        GridItem(.fixed(120)),
+        GridItem(.fixed(120))
+    ]
+    
+    @ObservedObject var viewModel: CatDetailsViewModel
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
             Text(cat.name ?? Constants.Strings.NameNotAvailable)
@@ -22,8 +29,30 @@ struct CatDetailsView: View {
                 Link("Wikipedia", destination: wikiURL)
                     .foregroundColor(.blue)
             }
+            ScrollView {
+                LazyVGrid(columns: self.columns) {
+                    ForEach(self.viewModel.images, id: \.self) { image in
+                        if let url = image.url {
+                            AsyncImage(url: URL(string: url)) { result in
+                                result.image?
+                                    .resizable()
+                                    .scaledToFill()
+                            }
+                            .frame(width: 110,
+                                   height: 110)
+                            .cornerRadius(25)
+                            .aspectRatio(contentMode: .fill)
+                        }
+                    }
+                }
+            }
         }
         .padding()
-        .navigationTitle(cat.name ?? Constants.Strings.NameNotAvailable)
+        .onAppear {
+            Task {
+                await self.viewModel.loadImages()
+            }
+        }
+        .navigationTitle(Constants.Strings.CatDetails)
     }
 }

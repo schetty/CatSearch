@@ -8,7 +8,8 @@ struct CatListView: View {
     var body: some View {
         NavigationView {
             List(viewModel.filteredCats) { cat in
-                NavigationLink(destination: CatDetailsView(cat: cat)) {
+                NavigationLink(destination: CatDetailsView(cat: cat,
+                                                           viewModel: CatDetailsViewModel(cat: cat))) {
                     HStack {
                         Text(cat.name ?? Constants.Strings.NameNotAvailable)
                     }

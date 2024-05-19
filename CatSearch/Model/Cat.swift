@@ -77,6 +77,15 @@ struct CatImage: Codable {
     let url: String?
 }
 
+extension CatImage: Hashable {
+    func hash(into hasher: inout Hasher) {
+      hasher.combine(id)
+    }
+    static func == (lhs: CatImage, rhs: CatImage) -> Bool {
+      lhs.id == rhs.id
+    }
+}
+
 // MARK: - Hashable
 
 extension Cat: Hashable {
