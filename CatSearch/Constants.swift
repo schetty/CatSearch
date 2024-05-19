@@ -10,15 +10,16 @@ import Foundation
 struct Constants {
     
     struct APIConstants {
-        static let host = "https://api.thecatapi.com"
-        static let apiKey = "live_xIFi0QXMVkdUEvOaK7Qm6QcOnOxLz4XrQKAUuGxaQPEKmZeAZmFL84w7duwT8rez"
-        static let breeds = host + "/v1/breeds"
-        static let breedImages = "/v1/images/search?limit=10&breed_ids="
-        static let breedImagesPostBreedId = "&api_key=\(apiKey))"
+        static let Host = "https://api.thecatapi.com"
+        static let ApiKey = "live_xIFi0QXMVkdUEvOaK7Qm6QcOnOxLz4XrQKAUuGxaQPEKmZeAZmFL84w7duwT8rez"
+        static let Breeds = Host + "/v1/breeds"
+        static let BreedImages = "/v1/images/search?limit=10&breed_ids="
+        static let BreedImagesPostBreedId = "&api_key=\(ApiKey))"
     }
     
     struct Strings {
-        static let nameNotAvailable = "No cat name is available"
+        static let ListTitle = "Select a cat breed"
+        static let NameNotAvailable = "No cat name is available"
     }
 }
 

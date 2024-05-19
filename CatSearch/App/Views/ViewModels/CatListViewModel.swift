@@ -1,10 +1,3 @@
-//
-//  CatListViewModel.swift
-//  CatSearch
-//
-//  Created by User on 5/16/24.
-//
-
 import Foundation
 
 @MainActor
@@ -14,7 +7,8 @@ final class CatListViewModel: ObservableObject {
     @Published var isLoading: Bool
     @Published var moreCatsToLoad = true
     @Published private(set) var cats: Cats = []
-    
+    @Published var searchText: String = ""
+
     private(set) var page = 0
     
     // MARK: - Initializer
@@ -23,9 +17,17 @@ final class CatListViewModel: ObservableObject {
     }
     
     func loadCats() async {
-        guard let cats: Cats = await APIManager.shared.fetchCats(fromURL: Constants.APIConstants.breeds) else { return }
+        guard let cats: Cats = await APIManager.shared.fetchCats(fromURL: Constants.APIConstants.Breeds) else { return }
         await MainActor.run {
             self.cats = cats
+        }
+    }
+
+    var filteredCats: Cats {
+        if searchText.isEmpty {
+            return cats
+        } else {
+            return cats.filter { $0.name?.localizedCaseInsensitiveContains(searchText) ?? false }
         }
     }
 }
