@@ -38,13 +38,10 @@ struct CatDetailsView: View {
                     }
                     LazyVGrid(columns: self.columns) {
                         ForEach(self.viewModel.images, id: \.self) { image in
-                            if let url = image.url {
-                                AsyncImage(url: URL(string: url)) { result in
-                                    result.image?
-                                        .resizable()
-                                        .scaledToFill()
-                                }
-                                .frame(width: 110, height: 110)
+                            if let urlString = image.url, let url = URL(string: urlString) {
+                                AsyncImageView(imageUrl: url)
+                                    .frame(width: 110,
+                                        height: 110)
                                 .cornerRadius(25)
                                 .aspectRatio(contentMode: .fill)
                             }
