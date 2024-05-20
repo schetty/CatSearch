@@ -7,23 +7,31 @@ struct CatListView: View {
     
     var body: some View {
         NavigationView {
-            List(viewModel.filteredCats) { cat in
-                NavigationLink(destination: CatDetailsView(cat: cat,
-                                                           viewModel: CatDetailsViewModel(cat: cat))) {
-                    HStack {
-                        Text(cat.name ?? Constants.Strings.NameNotAvailable)
+            ZStack {
+                List {
+                    ForEach(viewModel.cats, id:\.self) { cat in
+                        NavigationLink(destination: CatDetailsView(cat: cat,
+                                                                   viewModel: CatDetailsViewModel(cat: cat))) {
+                            HStack {
+                                Text(cat.name ?? Constants.Strings.NameNotAvailable)
+                            }
+                        }
+                    }.listRowBackground(Color.clear)
+                }.scrollContentBackground(.hidden)
+                    .background(LinearGradient(gradient: Gradient(colors: [.peach, .aquamarine, .white, .white]),
+                                               startPoint: .top,
+                                               endPoint: .bottom).ignoresSafeArea()
+                    )
+                    .onAppear {
+                        if viewModel.cats.isEmpty {
+                            Task {
+                                await self.viewModel.loadCats()
+                            }
+                        }
                     }
-                }
+                    .navigationTitle(Constants.Strings.ListTitle)
+                    .searchable(text: $viewModel.searchText)
             }
-            .onAppear {
-                if viewModel.cats.isEmpty {
-                    Task {
-                        await self.viewModel.loadCats()
-                    }
-                }
-            }
-            .navigationTitle(Constants.Strings.ListTitle)
-            .searchable(text: $viewModel.searchText)
         }
     }
 }

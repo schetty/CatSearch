@@ -1,9 +1,22 @@
 import SwiftUI
 
 struct CatContentView: View {
+    @StateObject private var viewModel = CatListViewModel()
+
     var body: some View {
         TabView {
-            CatListView(viewModel: CatListViewModel())
+            CatListView(viewModel: viewModel)
+                .tabItem {
+                    Label {
+                        Text(Constants.Strings.ListTitle)
+                    } icon: {
+                        Image(systemName: "list.dash")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 24, height: 24)
+                    }
+                }
+
             Text(Constants.Strings.Home)
                 .tabItem {
                     Label {
@@ -16,7 +29,7 @@ struct CatContentView: View {
                     }
                 }
             
-            Text(Constants.Strings.Favs)
+            CatFavouritesView(viewModel: viewModel)
                 .tabItem {
                     Label {
                         Text(Constants.Strings.Favs)
@@ -27,8 +40,7 @@ struct CatContentView: View {
                             .frame(width: 24, height: 24)
                     }
                 }
-                .badge(7)
+                .badge(viewModel.favoriteCats.count)
         }
     }
 }
-
