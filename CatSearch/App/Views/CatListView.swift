@@ -9,16 +9,17 @@ struct CatListView: View {
         NavigationView {
             ZStack {
                 List {
-                    ForEach(viewModel.cats, id:\.self) { cat in
+                    ForEach(viewModel.cats, id: \.self) { cat in
                         NavigationLink(destination: CatDetailsView(cat: cat,
-                                                                   viewModel: CatDetailsViewModel(cat: cat))) {
+                                                                   viewModel: CatDetailsViewModel(cat: cat)).toolbarRole(.editor)
+                        ) {
                             HStack {
-                                Text(cat.name ?? Constants.Strings.NameNotAvailable)
+                                Text(cat.name ?? Constants.Strings.NameNotAvailable).font(Constants.Fonts.GeneralSans)
                             }
                         }
                     }.listRowBackground(Color.clear)
                 }.scrollContentBackground(.hidden)
-                    .background(LinearGradient(gradient: Gradient(colors: [.peach, .aquamarine, .white, .white]),
+                 .background(LinearGradient(gradient: Gradient(colors: [.peach, .aquamarine, .white, .white]),
                                                startPoint: .top,
                                                endPoint: .bottom).ignoresSafeArea()
                     )

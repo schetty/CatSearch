@@ -5,10 +5,10 @@ struct CatContentView: View {
 
     var body: some View {
         TabView {
-            CatListView(viewModel: viewModel)
+            CatListView(viewModel: viewModel).toolbarRole(.editor)
                 .tabItem {
                     Label {
-                        Text(Constants.Strings.ListTitle)
+                        Text(Constants.Strings.ListTitle).font(Constants.Fonts.GeneralSans)
                     } icon: {
                         Image(systemName: "list.dash")
                             .resizable()
@@ -20,7 +20,7 @@ struct CatContentView: View {
             Text(Constants.Strings.Home)
                 .tabItem {
                     Label {
-                        Text(Constants.Strings.Home)
+                        Text(Constants.Strings.Home).font(Constants.Fonts.GeneralSans)
                     } icon: {
                         Image("cathome")
                             .resizable()
@@ -29,10 +29,10 @@ struct CatContentView: View {
                     }
                 }
             
-            CatFavouritesView(viewModel: viewModel)
+            CatFavouritesView(viewModel: viewModel).toolbarRole(.editor)
                 .tabItem {
                     Label {
-                        Text(Constants.Strings.Favs)
+                        Text(Constants.Strings.Favs).font(Constants.Fonts.GeneralSans)
                     } icon: {
                         Image("catlove")
                             .resizable()

@@ -29,12 +29,12 @@ struct CatDetailsView: View {
                                 .imageScale(.large)
                         }
                     }
-                    Text("Temperament: \(cat.temperament ?? "N/A")")
-                    Text("Origin: \(cat.origin ?? "N/A")")
-                    Text("Description: \(cat.catDescription ?? "N/A")")
+                    Text("Temperament: \(cat.temperament ?? "N/A")").font(Constants.Fonts.GeneralSansMedium)
+                    Text("Origin: \(cat.origin ?? "N/A")").font(Constants.Fonts.GeneralSansMedium)
+                    Text("Description: \(cat.catDescription ?? "N/A")").font(Constants.Fonts.GeneralSansMedium)
                     if let url = cat.wikipediaURL, let wikiURL = URL(string: url) {
-                        Link("Wikipedia", destination: wikiURL)
-                            .foregroundColor(.blue)
+                        Link("Wikipedia Page", destination: wikiURL)
+                            .foregroundColor(.mauve)
                     }
                     LazyVGrid(columns: self.columns) {
                         ForEach(self.viewModel.images, id: \.self) { image in
@@ -54,10 +54,11 @@ struct CatDetailsView: View {
                         await self.viewModel.loadImages()
                         isFavorite = viewModel.isFavorite(cat: cat)
                     }
-                }
-                .navigationTitle(Constants.Strings.CatDetails)
-        }.background(LinearGradient(gradient: Gradient(colors: [.peach, .aquamarine, .white, .white, .white]),
-                                    startPoint: .top,
-                                    endPoint: .bottom).ignoresSafeArea())
+                }.navigationTitle(Constants.Strings.CatDetails).font(Constants.Fonts.GeneralSansBold)
+                .background(LinearGradient(gradient: Gradient(colors: [.peach, .aquamarine, .white, .white]),
+                                              startPoint: .top,
+                                              endPoint: .bottom).ignoresSafeArea()
+                   )
+        }
     }
 }

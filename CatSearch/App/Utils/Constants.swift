@@ -5,7 +5,7 @@
 //  Created by Naomi on 5/15/24.
 //
 
-import Foundation
+import SwiftUI
 
 struct Constants {
     
@@ -23,6 +23,13 @@ struct Constants {
         static let Home = "Home"
         static let Favs = "Favourites"
         static let CatDetails = "Cat Details"
+    }
+    
+    struct Fonts {
+        static let GeneralSans = Font.custom("GeneralSans-Regular", size: 15.0)
+        static let GeneralSansLight = Font.custom("GeneralSans-Light", size: 15.0)
+        static let GeneralSansMedium = Font.custom("GeneralSans-Medium", size: 15.0)
+        static let GeneralSansBold = Font.custom("GeneralSans-Bold", size: 25.0)
     }
 }
 
