@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class CatFavoritesViewModel: ObservableObject {
+final class FavouriteCatBreedsViewModel: ObservableObject {
     @Published var favoriteCats: [Cat] = []
     private let favoritesKey = "favorites"
     

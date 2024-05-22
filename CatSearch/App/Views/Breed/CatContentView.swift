@@ -4,12 +4,12 @@ import SwiftData
 struct CatContentView: View {
     
     // MARK: - Properties
-    @StateObject var catListViewModel: CatListViewModel = .init()
-    @StateObject var catFavoritesViewModel: CatFavoritesViewModel = .init()
+    @StateObject var catBreedListViewModel: CatBreedListViewModel = .init()
+    @StateObject var favouriteCatBreedsViewModel: FavouriteCatBreedsViewModel = .init()
 
     var body: some View {
         TabView {
-            CatListView(viewModel: catListViewModel)
+            CatBreedListView(viewModel: catBreedListViewModel)
                 .toolbarRole(.editor)
                 .tabItem {
                     Label {
@@ -24,7 +24,7 @@ struct CatContentView: View {
                 }
             
             
-            CatFavouritesView(viewModel: catFavoritesViewModel)
+            FavoriteCatBreedsView(viewModel: favouriteCatBreedsViewModel)
                 .toolbarRole(.editor)
                 .tabItem {
                     Label {
@@ -37,7 +37,7 @@ struct CatContentView: View {
                                    height: 24)
                     }
                 }
-                .badge(catFavoritesViewModel.favoriteCats.count)
+                .badge(favouriteCatBreedsViewModel.favoriteCats.count)
         }
     }
 }

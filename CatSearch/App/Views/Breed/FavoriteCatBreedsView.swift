@@ -1,15 +1,15 @@
 import SwiftUI
 
-struct CatFavouritesView: View {
-    @ObservedObject var viewModel: CatFavoritesViewModel
+struct FavoriteCatBreedsView: View {
+    @ObservedObject var viewModel: FavouriteCatBreedsViewModel
     
     var body: some View {
         NavigationView {
             ZStack {
                 List {
                     ForEach(viewModel.favoriteCats, id: \.self) { cat in
-                        NavigationLink(destination: CatDetailsView(cat: cat,
-                                                                   viewModel: CatDetailsViewModel(cat: cat)).toolbarRole(.editor)
+                        NavigationLink(destination: CatBreedDetailsView(cat: cat,
+                                                                   viewModel: CatBreedDetailsViewModel(cat: cat)).toolbarRole(.editor)
                         ) {
                             HStack {
                                 Text(cat.name ?? Constants.Strings.NameNotAvailable).font(Constants.Fonts.GeneralSans)
@@ -30,6 +30,6 @@ struct CatFavouritesView: View {
 
 struct CatFavouritesView_Previews: PreviewProvider {
     static var previews: some View {
-        CatFavouritesView(viewModel: CatFavoritesViewModel())
+        FavoriteCatBreedsView(viewModel: FavouriteCatBreedsViewModel())
     }
 }

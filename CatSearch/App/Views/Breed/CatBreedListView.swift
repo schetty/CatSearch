@@ -2,10 +2,10 @@ import SwiftUI
 import SwiftData
 import Lottie
 
-struct CatListView: View {
+struct CatBreedListView: View {
     @Environment(\.modelContext) private var context
     @Query(sort: \Cat.id, order: .forward) private var allCats: [Cat]
-    @ObservedObject var viewModel: CatListViewModel
+    @ObservedObject var viewModel: CatBreedListViewModel
     @State private var isLoading: Bool = true
     
     var body: some View {
@@ -18,8 +18,8 @@ struct CatListView: View {
                 } else {
                     List {
                         ForEach(viewModel.filteredCats, id: \.self) { cat in
-                            NavigationLink(destination: CatDetailsView(cat: cat,
-                                                                       viewModel: CatDetailsViewModel(cat: cat)).toolbarRole(.editor)
+                            NavigationLink(destination: CatBreedDetailsView(cat: cat,
+                                                                       viewModel: CatBreedDetailsViewModel(cat: cat)).toolbarRole(.editor)
                             ) {
                                 HStack {
                                     Text(cat.name ?? Constants.Strings.NameNotAvailable).font(Constants.Fonts.GeneralSans)

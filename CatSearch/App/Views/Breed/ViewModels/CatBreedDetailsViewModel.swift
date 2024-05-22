@@ -8,18 +8,16 @@
 import Foundation
 
 @MainActor
-final class CatDetailsViewModel: ObservableObject {
+final class CatBreedDetailsViewModel: ObservableObject {
     
     // MARK: - Properties
     let cat: Cat
-    @Published var isLoading: Bool
     @Published private(set) var images: [CatImage] = []
     private let favoritesKey = "favorites"
     
     
     // MARK: - Initializer
-    init(isLoading: Bool = true, cat: Cat) {
-        self.isLoading = isLoading
+    init(cat: Cat) {
         self.cat = cat
     }
     

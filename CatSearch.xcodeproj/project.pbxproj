@@ -8,31 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		B30DD9B02BFA015700FC0F54 /* CatDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30DD9AF2BFA015700FC0F54 /* CatDetailsView.swift */; };
-		B30DD9B22BFA017200FC0F54 /* CatDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30DD9B12BFA017200FC0F54 /* CatDetailsViewModel.swift */; };
+		B30DD9B22BFA017200FC0F54 /* CatBreedDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30DD9B12BFA017200FC0F54 /* CatBreedDetailsViewModel.swift */; };
 		B30DD9B42BFA04E500FC0F54 /* CatContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30DD9B32BFA04E500FC0F54 /* CatContentView.swift */; };
 		B31570112BFB96F50098CCB6 /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31570102BFB96F50098CCB6 /* AsyncImageView.swift */; };
 		B31570162BFB9C120098CCB6 /* GeneralSans-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = B31570122BFB9C110098CCB6 /* GeneralSans-Regular.otf */; };
 		B31570172BFB9C120098CCB6 /* GeneralSans-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B31570132BFB9C120098CCB6 /* GeneralSans-Bold.otf */; };
 		B31570182BFB9C120098CCB6 /* GeneralSans-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = B31570142BFB9C120098CCB6 /* GeneralSans-Light.otf */; };
 		B31570192BFB9C120098CCB6 /* GeneralSans-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = B31570152BFB9C120098CCB6 /* GeneralSans-Medium.otf */; };
-		B31570212BFCCE990098CCB6 /* CatFavouritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31570202BFCCE990098CCB6 /* CatFavouritesViewModel.swift */; };
+		B31570212BFCCE990098CCB6 /* FavouriteCatBreedsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31570202BFCCE990098CCB6 /* FavouriteCatBreedsViewModel.swift */; };
 		B35031AA2BFE47A700B9BAA8 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = B35031A92BFE47A700B9BAA8 /* Lottie */; };
 		B35031AC2BFE4DDC00B9BAA8 /* LottieLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35031AB2BFE4DDC00B9BAA8 /* LottieLoader.swift */; };
 		B35031AE2BFE4F4D00B9BAA8 /* loader.json in Resources */ = {isa = PBXBuildFile; fileRef = B35031AD2BFE4F4D00B9BAA8 /* loader.json */; };
-		B35A68482BFA53BF00FECF8C /* CatFavouritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35A68472BFA53BF00FECF8C /* CatFavouritesView.swift */; };
+		B35A68482BFA53BF00FECF8C /* FavoriteCatBreedsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35A68472BFA53BF00FECF8C /* FavoriteCatBreedsView.swift */; };
 		CE9B3F612BF513AA0034E6E3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B3F602BF513AA0034E6E3 /* Constants.swift */; };
 		CE9B3F662BF514BE0034E6E3 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B3F652BF514BE0034E6E3 /* APIManager.swift */; };
 		CE9B3F6D2BF52DD80034E6E3 /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B3F6C2BF52DD80034E6E3 /* Cat.swift */; };
-		CE9B3F702BF627980034E6E3 /* CatListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B3F6F2BF627980034E6E3 /* CatListViewModel.swift */; };
+		CE9B3F702BF627980034E6E3 /* CatBreedListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B3F6F2BF627980034E6E3 /* CatBreedListViewModel.swift */; };
 		CEDA01F02BF4F16600E5AEB3 /* CatSearchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA01EF2BF4F16600E5AEB3 /* CatSearchApp.swift */; };
-		CEDA01F22BF4F16600E5AEB3 /* CatListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA01F12BF4F16600E5AEB3 /* CatListView.swift */; };
+		CEDA01F22BF4F16600E5AEB3 /* CatBreedListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA01F12BF4F16600E5AEB3 /* CatBreedListView.swift */; };
 		CEDA01F62BF4F17700E5AEB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEDA01F52BF4F17700E5AEB3 /* Assets.xcassets */; };
 		CEDA01FA2BF4F17700E5AEB3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEDA01F92BF4F17700E5AEB3 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B30DD9AF2BFA015700FC0F54 /* CatDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatDetailsView.swift; sourceTree = "<group>"; };
-		B30DD9B12BFA017200FC0F54 /* CatDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatDetailsViewModel.swift; sourceTree = "<group>"; };
+		B30DD9B12BFA017200FC0F54 /* CatBreedDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatBreedDetailsViewModel.swift; sourceTree = "<group>"; };
 		B30DD9B32BFA04E500FC0F54 /* CatContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatContentView.swift; sourceTree = "<group>"; };
 		B31570102BFB96F50098CCB6 /* AsyncImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
 		B31570122BFB9C110098CCB6 /* GeneralSans-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GeneralSans-Regular.otf"; sourceTree = "<group>"; };
@@ -40,17 +40,17 @@
 		B31570142BFB9C120098CCB6 /* GeneralSans-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GeneralSans-Light.otf"; sourceTree = "<group>"; };
 		B31570152BFB9C120098CCB6 /* GeneralSans-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GeneralSans-Medium.otf"; sourceTree = "<group>"; };
 		B315701F2BFCB8C80098CCB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		B31570202BFCCE990098CCB6 /* CatFavouritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatFavouritesViewModel.swift; sourceTree = "<group>"; };
+		B31570202BFCCE990098CCB6 /* FavouriteCatBreedsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteCatBreedsViewModel.swift; sourceTree = "<group>"; };
 		B35031AB2BFE4DDC00B9BAA8 /* LottieLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieLoader.swift; sourceTree = "<group>"; };
 		B35031AD2BFE4F4D00B9BAA8 /* loader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loader.json; sourceTree = "<group>"; };
-		B35A68472BFA53BF00FECF8C /* CatFavouritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatFavouritesView.swift; sourceTree = "<group>"; };
+		B35A68472BFA53BF00FECF8C /* FavoriteCatBreedsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCatBreedsView.swift; sourceTree = "<group>"; };
 		CE9B3F602BF513AA0034E6E3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CE9B3F652BF514BE0034E6E3 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		CE9B3F6C2BF52DD80034E6E3 /* Cat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
-		CE9B3F6F2BF627980034E6E3 /* CatListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatListViewModel.swift; sourceTree = "<group>"; };
+		CE9B3F6F2BF627980034E6E3 /* CatBreedListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatBreedListViewModel.swift; sourceTree = "<group>"; };
 		CEDA01EC2BF4F16600E5AEB3 /* CatSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEDA01EF2BF4F16600E5AEB3 /* CatSearchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatSearchApp.swift; sourceTree = "<group>"; };
-		CEDA01F12BF4F16600E5AEB3 /* CatListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatListView.swift; sourceTree = "<group>"; };
+		CEDA01F12BF4F16600E5AEB3 /* CatBreedListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatBreedListView.swift; sourceTree = "<group>"; };
 		CEDA01F52BF4F17700E5AEB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEDA01F72BF4F17700E5AEB3 /* CatSearch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CatSearch.entitlements; sourceTree = "<group>"; };
 		CEDA01F92BF4F17700E5AEB3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -123,6 +123,18 @@
 			path = Animations;
 			sourceTree = "<group>";
 		};
+		B35031B02BFE581A00B9BAA8 /* Breed */ = {
+			isa = PBXGroup;
+			children = (
+				CE9B3F6E2BF61E6D0034E6E3 /* ViewModels */,
+				CEDA01F12BF4F16600E5AEB3 /* CatBreedListView.swift */,
+				B30DD9AF2BFA015700FC0F54 /* CatDetailsView.swift */,
+				B30DD9B32BFA04E500FC0F54 /* CatContentView.swift */,
+				B35A68472BFA53BF00FECF8C /* FavoriteCatBreedsView.swift */,
+			);
+			path = Breed;
+			sourceTree = "<group>";
+		};
 		CE9B3F622BF513B60034E6E3 /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,11 +156,7 @@
 		CE9B3F642BF514460034E6E3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				CE9B3F6E2BF61E6D0034E6E3 /* ViewModels */,
-				CEDA01F12BF4F16600E5AEB3 /* CatListView.swift */,
-				B30DD9AF2BFA015700FC0F54 /* CatDetailsView.swift */,
-				B30DD9B32BFA04E500FC0F54 /* CatContentView.swift */,
-				B35A68472BFA53BF00FECF8C /* CatFavouritesView.swift */,
+				B35031B02BFE581A00B9BAA8 /* Breed */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -164,9 +172,9 @@
 		CE9B3F6E2BF61E6D0034E6E3 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				CE9B3F6F2BF627980034E6E3 /* CatListViewModel.swift */,
-				B30DD9B12BFA017200FC0F54 /* CatDetailsViewModel.swift */,
-				B31570202BFCCE990098CCB6 /* CatFavouritesViewModel.swift */,
+				CE9B3F6F2BF627980034E6E3 /* CatBreedListViewModel.swift */,
+				B30DD9B12BFA017200FC0F54 /* CatBreedDetailsViewModel.swift */,
+				B31570202BFCCE990098CCB6 /* FavouriteCatBreedsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -291,10 +299,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEDA01F22BF4F16600E5AEB3 /* CatListView.swift in Sources */,
-				B35A68482BFA53BF00FECF8C /* CatFavouritesView.swift in Sources */,
+				CEDA01F22BF4F16600E5AEB3 /* CatBreedListView.swift in Sources */,
+				B35A68482BFA53BF00FECF8C /* FavoriteCatBreedsView.swift in Sources */,
 				CE9B3F6D2BF52DD80034E6E3 /* Cat.swift in Sources */,
-				B31570212BFCCE990098CCB6 /* CatFavouritesViewModel.swift in Sources */,
+				B31570212BFCCE990098CCB6 /* FavouriteCatBreedsViewModel.swift in Sources */,
 				B35031AC2BFE4DDC00B9BAA8 /* LottieLoader.swift in Sources */,
 				CE9B3F662BF514BE0034E6E3 /* APIManager.swift in Sources */,
 				B30DD9B02BFA015700FC0F54 /* CatDetailsView.swift in Sources */,
@@ -302,8 +310,8 @@
 				B30DD9B42BFA04E500FC0F54 /* CatContentView.swift in Sources */,
 				CEDA01F02BF4F16600E5AEB3 /* CatSearchApp.swift in Sources */,
 				CE9B3F612BF513AA0034E6E3 /* Constants.swift in Sources */,
-				B30DD9B22BFA017200FC0F54 /* CatDetailsViewModel.swift in Sources */,
-				CE9B3F702BF627980034E6E3 /* CatListViewModel.swift in Sources */,
+				B30DD9B22BFA017200FC0F54 /* CatBreedDetailsViewModel.swift in Sources */,
+				CE9B3F702BF627980034E6E3 /* CatBreedListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

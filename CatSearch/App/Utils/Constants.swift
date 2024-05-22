@@ -22,7 +22,7 @@ struct Constants {
         static let NameNotAvailable = "No cat name is available"
         static let Home = "Home"
         static let Favs = "Favourites"
-        static let CatDetails = "Cat Details"
+        static let CatBreedDetails = "Cat Breed Details"
         static let Temperament = "Temperament: "
         static let Description = "Description: "
         static let Origin = "Origin: "

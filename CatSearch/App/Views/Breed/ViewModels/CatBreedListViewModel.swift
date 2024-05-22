@@ -2,7 +2,7 @@ import SwiftUI
 import SwiftData
 
 @MainActor
-final class CatListViewModel: ObservableObject {
+final class CatBreedListViewModel: ObservableObject {
     @Published var cats: [Cat] = []
     @Published var searchText: String = ""
     

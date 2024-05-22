@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct CatDetailsView: View {
+struct CatBreedDetailsView: View {
     
     // MARK: - Properties
     let cat: Cat
@@ -10,7 +10,7 @@ struct CatDetailsView: View {
         GridItem(.fixed(120))
     ]
     
-    @ObservedObject var viewModel: CatDetailsViewModel
+    @ObservedObject var viewModel: CatBreedDetailsViewModel
     @State private var isFavorite: Bool = false
     @State private var scale: CGFloat = 1.0
     
@@ -66,7 +66,7 @@ struct CatDetailsView: View {
                         await self.viewModel.loadImages()
                         isFavorite = viewModel.isFavorite(cat: cat)
                     }
-                }.navigationTitle(Constants.Strings.CatDetails).font(Constants.Fonts.GeneralSansBold)
+                }.navigationTitle(Constants.Strings.CatBreedDetails).font(Constants.Fonts.GeneralSansBold)
                 .background(LinearGradient(gradient: Gradient(colors: [.peach, .aquamarine, .white, .white]),
                                            startPoint: .top,
                                            endPoint: .bottom).ignoresSafeArea()
