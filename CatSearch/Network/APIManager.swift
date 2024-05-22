@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 // MARK: - APIManager
 
 final class APIManager {
@@ -42,7 +41,6 @@ final class APIManager {
         } catch {
             print("An error occured downloading the data")
         }
-        
         return nil
     }
 }

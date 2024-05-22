@@ -2,14 +2,15 @@ import SwiftUI
 import SwiftData
 
 struct CatListView: View {
-    @Environment(\.modelContext) private var modelContext
+    @Environment(\.modelContext) private var context
+    @Query(sort: \Cat.id, order: .forward) private var allCats: [Cat]
     @ObservedObject var viewModel: CatListViewModel
     
     var body: some View {
         NavigationView {
             ZStack {
                 List {
-                    ForEach(viewModel.cats, id: \.self) { cat in
+                    ForEach(viewModel.filteredCats, id: \.self) { cat in
                         NavigationLink(destination: CatDetailsView(cat: cat,
                                                                    viewModel: CatDetailsViewModel(cat: cat)).toolbarRole(.editor)
                         ) {
@@ -19,15 +20,22 @@ struct CatListView: View {
                         }
                     }.listRowBackground(Color.clear)
                 }.scrollContentBackground(.hidden)
-                 .background(LinearGradient(gradient: Gradient(colors: [.peach, .aquamarine, .white, .white]),
+                    .background(LinearGradient(gradient: Gradient(colors: [.peach, .aquamarine, .white, .white]),
                                                startPoint: .top,
                                                endPoint: .bottom).ignoresSafeArea()
                     )
                     .onAppear {
-                        if viewModel.cats.isEmpty {
+                        if allCats.isEmpty {
                             Task {
-                                await self.viewModel.loadCats()
+                                await viewModel.loadCats(from: context)
+                                do {
+                                    try context.save()
+                                } catch {
+                                    print("Failed to save context: \(error)")
+                                }
                             }
+                        } else {
+                            viewModel.cats = allCats
                         }
                     }
                     .navigationTitle(Constants.Strings.ListTitle)

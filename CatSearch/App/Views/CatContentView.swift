@@ -1,11 +1,15 @@
 import SwiftUI
+import SwiftData
 
 struct CatContentView: View {
-    @StateObject private var viewModel = CatListViewModel()
+    
+    @StateObject var catListViewModel: CatListViewModel = .init()
+    @StateObject var catFavoritesViewModel: CatFavoritesViewModel = .init()
 
     var body: some View {
         TabView {
-            CatListView(viewModel: viewModel).toolbarRole(.editor)
+            CatListView(viewModel: catListViewModel)
+                .toolbarRole(.editor)
                 .tabItem {
                     Label {
                         Text(Constants.Strings.ListTitle).font(Constants.Fonts.GeneralSans)
@@ -16,7 +20,9 @@ struct CatContentView: View {
                             .frame(width: 24, height: 24)
                     }
                 }
-
+                .onAppear {
+                }
+            
             Text(Constants.Strings.Home)
                 .tabItem {
                     Label {
@@ -29,7 +35,8 @@ struct CatContentView: View {
                     }
                 }
             
-            CatFavouritesView(viewModel: viewModel).toolbarRole(.editor)
+            CatFavouritesView(viewModel: catFavoritesViewModel)
+                .toolbarRole(.editor)
                 .tabItem {
                     Label {
                         Text(Constants.Strings.Favs).font(Constants.Fonts.GeneralSans)
@@ -40,7 +47,7 @@ struct CatContentView: View {
                             .frame(width: 24, height: 24)
                     }
                 }
-                .badge(viewModel.favoriteCats.count)
+                .badge(catFavoritesViewModel.favoriteCats.count)
         }
     }
 }

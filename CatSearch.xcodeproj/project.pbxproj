@@ -15,6 +15,7 @@
 		B31570172BFB9C120098CCB6 /* GeneralSans-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B31570132BFB9C120098CCB6 /* GeneralSans-Bold.otf */; };
 		B31570182BFB9C120098CCB6 /* GeneralSans-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = B31570142BFB9C120098CCB6 /* GeneralSans-Light.otf */; };
 		B31570192BFB9C120098CCB6 /* GeneralSans-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = B31570152BFB9C120098CCB6 /* GeneralSans-Medium.otf */; };
+		B31570212BFCCE990098CCB6 /* CatFavouritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31570202BFCCE990098CCB6 /* CatFavouritesViewModel.swift */; };
 		B35A68482BFA53BF00FECF8C /* CatFavouritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35A68472BFA53BF00FECF8C /* CatFavouritesView.swift */; };
 		CE9B3F612BF513AA0034E6E3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B3F602BF513AA0034E6E3 /* Constants.swift */; };
 		CE9B3F662BF514BE0034E6E3 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B3F652BF514BE0034E6E3 /* APIManager.swift */; };
@@ -36,6 +37,7 @@
 		B31570142BFB9C120098CCB6 /* GeneralSans-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GeneralSans-Light.otf"; sourceTree = "<group>"; };
 		B31570152BFB9C120098CCB6 /* GeneralSans-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GeneralSans-Medium.otf"; sourceTree = "<group>"; };
 		B315701F2BFCB8C80098CCB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		B31570202BFCCE990098CCB6 /* CatFavouritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatFavouritesViewModel.swift; sourceTree = "<group>"; };
 		B35A68472BFA53BF00FECF8C /* CatFavouritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatFavouritesView.swift; sourceTree = "<group>"; };
 		CE9B3F602BF513AA0034E6E3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CE9B3F652BF514BE0034E6E3 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 			children = (
 				CE9B3F6F2BF627980034E6E3 /* CatListViewModel.swift */,
 				B30DD9B12BFA017200FC0F54 /* CatDetailsViewModel.swift */,
+				B31570202BFCCE990098CCB6 /* CatFavouritesViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -234,6 +237,9 @@
 				Base,
 			);
 			mainGroup = CEDA01E32BF4F16500E5AEB3;
+			packageReferences = (
+				B35031A42BFE1D2900B9BAA8 /* XCRemoteSwiftPackageReference "SwiftDataStorage" */,
+			);
 			productRefGroup = CEDA01ED2BF4F16600E5AEB3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -267,6 +273,7 @@
 				CEDA01F22BF4F16600E5AEB3 /* CatListView.swift in Sources */,
 				B35A68482BFA53BF00FECF8C /* CatFavouritesView.swift in Sources */,
 				CE9B3F6D2BF52DD80034E6E3 /* Cat.swift in Sources */,
+				B31570212BFCCE990098CCB6 /* CatFavouritesViewModel.swift in Sources */,
 				CE9B3F662BF514BE0034E6E3 /* APIManager.swift in Sources */,
 				B30DD9B02BFA015700FC0F54 /* CatDetailsView.swift in Sources */,
 				B31570112BFB96F50098CCB6 /* AsyncImageView.swift in Sources */,
@@ -495,6 +502,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B35031A42BFE1D2900B9BAA8 /* XCRemoteSwiftPackageReference "SwiftDataStorage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/JamesSedlacek/SwiftDataStorage";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = CEDA01E42BF4F16500E5AEB3 /* Project object */;
 }

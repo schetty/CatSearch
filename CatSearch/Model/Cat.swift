@@ -5,12 +5,12 @@
 //  Created by Naomi on 5/15/24.
 //
 
+import Foundation
 import SwiftData
-
-typealias Cats = [Cat]
 
 // MARK: - Cats
 @Model
+
 final class Cat: Codable, Identifiable {
     @Attribute(.unique) let id: String?
     let name: String?
@@ -19,7 +19,7 @@ final class Cat: Codable, Identifiable {
     let catDescription: String?
     let altNames: String?
     let wikipediaURL: String?
-
+    
     enum CodingKeys: String, CodingKey {
         case id
         case name
@@ -29,7 +29,7 @@ final class Cat: Codable, Identifiable {
         case altNames = "alt_names"
         case wikipediaURL = "wikipedia_url"
     }
-
+    
     init(id: String?,
          name: String?,
          temperament: String?,
@@ -45,7 +45,7 @@ final class Cat: Codable, Identifiable {
         self.altNames = altNames
         self.wikipediaURL = wikipediaURL
     }
-
+    
     required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         id = try container.decodeIfPresent(String.self, forKey: .id)
@@ -56,7 +56,7 @@ final class Cat: Codable, Identifiable {
         altNames = try container.decodeIfPresent(String.self, forKey: .altNames)
         wikipediaURL = try container.decodeIfPresent(String.self, forKey: .wikipediaURL)
     }
-
+    
     func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encode(id, forKey: .id)
@@ -79,21 +79,21 @@ struct CatImage: Codable {
 
 extension CatImage: Hashable {
     func hash(into hasher: inout Hasher) {
-      hasher.combine(id)
+        hasher.combine(id)
     }
     static func == (lhs: CatImage, rhs: CatImage) -> Bool {
-      lhs.id == rhs.id
+        lhs.id == rhs.id
     }
 }
 
 // MARK: - Hashable
 
 extension Cat: Hashable {
-  func hash(into hasher: inout Hasher) {
-    hasher.combine(id)
-  }
-
-  static func == (lhs: Cat, rhs: Cat) -> Bool {
-    lhs.id == rhs.id
-  }
+    static func == (lhs: Cat, rhs: Cat) -> Bool {
+        return lhs.id == rhs.id
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
 }

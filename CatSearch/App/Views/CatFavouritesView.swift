@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct CatFavouritesView: View {
-    @ObservedObject var viewModel: CatListViewModel
+    @ObservedObject var viewModel: CatFavoritesViewModel
     
     var body: some View {
         NavigationView {
@@ -30,6 +30,6 @@ struct CatFavouritesView: View {
 
 struct CatFavouritesView_Previews: PreviewProvider {
     static var previews: some View {
-        CatFavouritesView(viewModel: CatListViewModel())
+        CatFavouritesView(viewModel: CatFavoritesViewModel())
     }
 }
