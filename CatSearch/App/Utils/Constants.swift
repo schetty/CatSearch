@@ -23,6 +23,11 @@ struct Constants {
         static let Home = "Home"
         static let Favs = "Favourites"
         static let CatDetails = "Cat Details"
+        static let Temperament = "Temperament: "
+        static let Description = "Description: "
+        static let Origin = "Origin: "
+        static let WikipediaPage = "Wikipedia Page"
+        
     }
     
     struct Fonts {

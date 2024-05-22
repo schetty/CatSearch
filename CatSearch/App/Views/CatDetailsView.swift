@@ -38,12 +38,12 @@ struct CatDetailsView: View {
                     }.padding(14)
                     
                     // MARK: - Cat Details Text + Wikipedia Link
-                    Text("Temperament: \(cat.temperament ?? "N/A")").font(Constants.Fonts.GeneralSansMedium)
-                    Text("Origin: \(cat.origin ?? "N/A")").font(Constants.Fonts.GeneralSansMedium)
-                    Text("Description: \(cat.catDescription ?? "N/A")").font(Constants.Fonts.GeneralSansMedium)
+                    Text(Constants.Strings.Temperament + "\(cat.temperament ?? "N/A")").font(Constants.Fonts.GeneralSansMedium)
+                    Text(Constants.Strings.Origin + "\(cat.origin ?? "N/A")").font(Constants.Fonts.GeneralSansMedium)
+                    Text(Constants.Strings.Description +  "\(cat.catDescription ?? "N/A")").font(Constants.Fonts.GeneralSansMedium)
                     
                     if let url = cat.wikipediaURL, let wikiURL = URL(string: url) {
-                        Link("Wikipedia Page", destination: wikiURL)
+                        Link(Constants.Strings.WikipediaPage, destination: wikiURL)
                             .foregroundColor(.mauve)
                     }
                     
