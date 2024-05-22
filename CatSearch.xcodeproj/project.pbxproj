@@ -43,6 +43,7 @@
 		B31570202BFCCE990098CCB6 /* FavouriteCatBreedsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteCatBreedsViewModel.swift; sourceTree = "<group>"; };
 		B35031AB2BFE4DDC00B9BAA8 /* LottieLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieLoader.swift; sourceTree = "<group>"; };
 		B35031AD2BFE4F4D00B9BAA8 /* loader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loader.json; sourceTree = "<group>"; };
+		B35031B32BFE5A7100B9BAA8 /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
 		B35A68472BFA53BF00FECF8C /* FavoriteCatBreedsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCatBreedsView.swift; sourceTree = "<group>"; };
 		CE9B3F602BF513AA0034E6E3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CE9B3F652BF514BE0034E6E3 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
@@ -183,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				CEDA01EE2BF4F16600E5AEB3 /* CatSearch */,
+				B35031B32BFE5A7100B9BAA8 /* Readme.md */,
 				CEDA01ED2BF4F16600E5AEB3 /* Products */,
 			);
 			sourceTree = "<group>";
